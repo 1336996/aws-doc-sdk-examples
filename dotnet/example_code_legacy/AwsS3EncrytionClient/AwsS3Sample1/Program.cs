@@ -66,8 +66,10 @@ namespace GettingStartedGuide
                 // Display the key information.
                 Console.WriteLine("Key in container " + keyContainerName + ": \n  {0}", key.ToXmlString(true));
 
+                /* THE AmazonS3EncryptionClient CLASS HAS BEEN DEPRECATED!
+                   USE THE AmazonS3EncryptionClientV2 CLIENT AS PART OF THE V3.5 RELEASE INSTEAD.
+                 */
                 using (client = new AmazonS3EncryptionClient(new EncryptionMaterials(key)))
-
                 {
                     Console.WriteLine("Listing buckets");
                     ListingBuckets();

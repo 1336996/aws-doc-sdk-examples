@@ -73,7 +73,10 @@ namespace KmsS3Encryption
             {
                 StorageMode = CryptoStorageMode.ObjectMetadata
             };
-
+            
+            /* THE AmazonS3EncryptionClient CLASS HAS BEEN DEPRECATED!
+               USE THE AmazonS3EncryptionClientV2 CLIENT AS PART OF THE V3.5 RELEASE INSTEAD.
+             */
             AmazonS3EncryptionClient s3Client = new AmazonS3EncryptionClient(config, materials);
 
             // encrypt and put object
